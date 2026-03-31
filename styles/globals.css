@@ -1,0 +1,103 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --primary-green: #013220;
+  --secondary-green: #355e3b;
+  --accent-gold: #d4af37;
+  --gold-hover: #c9a227;
+  --background-light: #f5f5f5;
+  --text-dark: #1a1a1a;
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  background-image: radial-gradient(circle at top, rgba(1, 50, 32, 0.08), transparent 60%);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
+}
+
+.header {
+  background-color: var(--primary-green);
+}
+
+.button-primary {
+  background-color: var(--accent-gold);
+  color: #000;
+}
+
+.button-primary:hover {
+  background-color: var(--gold-hover);
+}
+
+
+@layer components {
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .container-base {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.35em] text-slate-500;
+  }
+  .section-title {
+    @apply mt-4 text-3xl font-semibold text-slate-900 md:text-4xl;
+  }
+  .section-subtitle {
+    @apply mt-4 text-lg text-slate-600;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200;
+    background-color: var(--accent-gold);
+    color: #000;
+    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.22);
+  }
+  .btn-primary:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(212, 175, 55, 0.3);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.22);
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold transition-all duration-200;
+    border-color: var(--primary-green);
+    color: var(--primary-green);
+  }
+  .btn-outline:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(1, 50, 32, 0.2);
+  }
+  .btn-outline:active {
+    transform: translateY(0);
+  }
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-lg;
+  }
+  .chip {
+    @apply rounded-full border border-slate-200 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600;
+  }
+  .input {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 shadow-sm focus:outline-none;
+  }
+}
+
+.input:focus {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(1, 50, 32, 0.2);
+}
