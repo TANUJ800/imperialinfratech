@@ -28,9 +28,9 @@ image: "/image/epoxy.png"  },
     image: "/image/bunglow.jpeg"
   },
   {
-    title: "Interiar Design for House",
-    category: "Interiar Designing",
-    description: "Interiar Designing in a luxurious setting.",
+    title: "Interior Design for House",
+    category: "Interior Designing",
+    description: "Interior Designing in a luxurious setting.",
     image: "/image/interiar.jpeg"
   },
 
