@@ -100,6 +100,7 @@ export default function ContactForm() {
             <option value="Repair and Recoating">Repair and Recoating</option>
             <option value="Civil and Structural Work">Civil and Structural Work</option>
             <option value="Warehouse Construction">Warehouse Construction</option>
+            <option value="Others">Others</option>
           </select>
         </label>
       </div>
