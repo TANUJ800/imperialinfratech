@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { siteData } from "../lib/siteData";
 
@@ -6,10 +6,6 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-
-  { href: "/domestic-construction", label: "Domestic" },
-  { href: "/commercial", label: "Commercial" },
-
   { href: "/industrial-epoxy-flooring", label: "Industrial Epoxy Flooring" },
   { href: "/projects", label: "Projects Portfolio" },
   { href: "/certifications", label: "Certifications & Compliance" },
@@ -23,7 +19,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b header border-white/10 backdrop-blur">
       <div className="flex items-center justify-between py-5 container-base">
         <Link className="flex items-center gap-3" href="/">
-<img src="/image/logo5.png" className="w-auto h-16" />          <div className="hidden sm:block">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[color:var(--accent-gold)] text-black font-semibold">
+            IC
+          </div>
+          <div className="hidden sm:block">
             <div className="text-sm font-semibold text-white">{siteData.name}</div>
             <div className="text-xs text-white/70">Industrial Epoxy Flooring</div>
           </div>

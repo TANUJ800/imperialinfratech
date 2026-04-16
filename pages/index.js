@@ -91,7 +91,7 @@ export default function Home() {
               </Link>
               <a
                 className="text-white btn-outline border-white/50 hover:border-white hover:text-white"
-                href={siteData.profileUrl}
+                href="image/company_profile.pdf"
                 download
               >
                 Download Company Profile
@@ -102,7 +102,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <img
                 className="object-cover w-64 h-64"
-                src="/image/logo.jpeg"
+                src="/image/logo5.png"
                 alt="Imperial Infratech-Con Logo"
               />
             </div>
